@@ -16,3 +16,10 @@ const calculateLoyaltyDiscount = (amount, years) => {
     let discountedPrice = amount * (1 - discount); // Apply discount to the amount
     return `Discounted Price: $${discountedPrice.toFixed(2)}`; // Return formatted discounted price
 };
+
+// Task 4: Parameters and Arguments - Product Shipping Cost Calculation
+function calculateShippingCost(weight, location, expedited = false) {
+    let baseCost = location === "USA" ? 5 + (0.5 * weight) : 10 + (0.7 * weight); // Calculate base shipping cost based on location and weight
+    if (expedited) baseCost += 10; // Add expedited shipping cost if applicable
+    return `Shipping Cost: $${baseCost.toFixed(2)}`; // Return formatted shipping cost
+}
