@@ -44,3 +44,9 @@ function createBudgetTracker() {
         return `Current Balance: -$${Math.abs(balance)}`; // Return formatted current balance
     };
 }
+
+// Task 8: Recursion - Business Growth Projection
+function calculateGrowth(years, revenue) {
+    if (years >= 10) return `Projected Revenue: $${revenue.toFixed(2)}`; // Stop recursion after 10 years
+    return calculateGrowth(years + 1, revenue * 1.05); // Recursively calculate 5% growth per year
+}
