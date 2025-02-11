@@ -23,3 +23,9 @@ function calculateShippingCost(weight, location, expedited = false) {
     if (expedited) baseCost += 10; // Add expedited shipping cost if applicable
     return `Shipping Cost: $${baseCost.toFixed(2)}`; // Return formatted shipping cost
 }
+
+// Task 5: Returning Values - Business Loan Interest Calculation
+function calculateLoanInterest(principal, rate, years) {
+    let interest = principal * rate * years; // Calculate total interest over the loan period
+    return `Total Interest: $${interest.toFixed(2)}`; // Return formatted total interest
+}
