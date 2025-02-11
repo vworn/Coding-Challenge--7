@@ -9,3 +9,10 @@ const calculateHourlyWage = function(salary, hoursPerWeek) {
     let hourlyWage = salary / (hoursPerWeek * 52); // Calculate hourly wage based on weekly hours and yearly salary
     return `Hourly Wage: $${hourlyWage.toFixed(2)}`; // Return formatted hourly wage
 };
+
+// Task 3: Arrow Function - Customer Loyalty Discount
+const calculateLoyaltyDiscount = (amount, years) => {
+    let discount = years >= 5 ? 0.15 : years >= 3 ? 0.10 : 0.05; // Determine discount percentage based on years
+    let discountedPrice = amount * (1 - discount); // Apply discount to the amount
+    return `Discounted Price: $${discountedPrice.toFixed(2)}`; // Return formatted discounted price
+};
