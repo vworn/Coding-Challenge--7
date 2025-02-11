@@ -56,6 +56,7 @@ function createBudgetTracker() {
         return `Current Balance: -$${Math.abs(balance)}`; // Return formatted current balance
     };
 }
+const budget = createBudgetTracker(); // Create an instance of the budget tracker
 console.log(budget(300)); // Expected output: "Current Balance: -$300"
 console.log(budget(200)); // Expected output: "Current Balance: -$500"
 
