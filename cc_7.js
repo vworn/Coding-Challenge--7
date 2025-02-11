@@ -29,3 +29,9 @@ function calculateLoanInterest(principal, rate, years) {
     let interest = principal * rate * years; // Calculate total interest over the loan period
     return `Total Interest: $${interest.toFixed(2)}`; // Return formatted total interest
 }
+
+// Task 6: Higher-Order Functions - Filtering High-Value Transactions
+const transactions = [500, 1200, 3000, 800, 2200]; // Define an array of transaction amounts
+const filterHighValueTransactions = (transactions, filterFunction) => {
+    return transactions.filter(filterFunction); // Use filter function to get transactions above threshold
+};
