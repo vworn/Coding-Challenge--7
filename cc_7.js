@@ -35,3 +35,12 @@ const transactions = [500, 1200, 3000, 800, 2200]; // Define an array of transac
 const filterHighValueTransactions = (transactions, filterFunction) => {
     return transactions.filter(filterFunction); // Use filter function to get transactions above threshold
 };
+
+// Task 7: Closures - Budget Tracker
+function createBudgetTracker() {
+    let balance = 0; // Initialize balance
+    return function(amount) {
+        balance -= amount; // Subtract amount from balance
+        return `Current Balance: -$${Math.abs(balance)}`; // Return formatted current balance
+    };
+}
